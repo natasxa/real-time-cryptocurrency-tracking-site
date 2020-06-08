@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- My CSSs -->
+    <link href="geckon.css" rel="stylesheet">
+    <link href="toggle.css" rel="stylesheet">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- Icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Charts  -->
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    <title>Geckon</title>
+</head>
+
+<body onload="getFunc()">
+    <!-- Spinner -->
+    <div class="popup">
+        <!-- Bootstrap spinner works, don't like it -->
+        <!-- <div id="spinner">
+            <div class="spinner-grow spinner-grow-sm text-light"></div>
+            <div class="spinner-grow spinner-grow-sm text-light"></div>
+            <div class="spinner-grow spinner-grow-sm text-light"></div>
+        </div> -->
+        <img id="spinner" src="spinner.gif">
+    </div>
+    <!-- Paralaxed area -->
+    <div class="bgimg">
+        <div class="caption">
+            <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">WELCOME</span>
+        </div>
+    </div>
+    <!-- Navigation -->
+    <nav id="navbar" class="text-right">
+        <div class="btn-group" role="group" aria-label="First group">
+            <button type="button" class="btn" id="home"><span id="white">Home</span></button>
+            <button type="button" class="btn" id="live"><span id="white">Live Reports</span></button>
+        </div>
+        <!-- Search -->
+        <div class="btn-group" role="group" aria-label="Second group">
+            <input type="text" id="searchText" class=" text-left" placeholder="&nbsp Search...">
+            <button type="button" class="btn" id="searchBtn">
+                <span id="white"><i class="fa fa-search"></i></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Modal for Toggle -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class='col-12 modal-title text-center'>
+                            YOU ALREADY</br>CHOOSED &nbsp; 5 &nbsp; ITEMS!
+                        </h3>
+                    </div>
+                    <div class="modal-body" id="modalBody" style="width: 90%;"></div>
+                    <div class="modal-footer">
+                        <button type="button" id="liveModal" class="btn btn-light" data-dismiss="modal">Live
+                            Reports</button>
+                        <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal for no Live Data -->
+        <div class="modal" id="myModalError" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" id="myModalErrorDialog">
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <button type='button' class='close' data-dismiss='modal' aria-label='Close'>&times;</button>
+                        <img src="modal.png" height="100px" style="padding-bottom: 15px; padding-left: 15px;" />
+                        <div id="modalText">
+                            Can't track this specific coin</br>No live data available
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main -->
+        <main class="flex-center"></main>
+    </div>
+
+    <script src="geckon.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,193 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font: 400 15px/1.8 "Lato", sans-serif;
+    color: #777;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+/*remove blue outlinning of button*/
+.btn:focus,
+.btn:active {
+    outline: none !important;
+    box-shadow: none;    
+}
+
+#live:hover{
+    color: darkblue;
+}
+
+.bgimg {
+    position: relative;
+    opacity: 1;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("bg.jpg");
+    min-height: 50%;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+.caption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+}
+  
+.popup {
+    display: block;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.1); 
+    z-index: 999999;
+}
+
+#spinner {
+    position: absolute;
+    width: 20vh;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.modal fade show, .modal-open{
+    padding-right: 0px!important;
+}
+
+#modalBody .close {
+    color: rgb(2, 117, 217); 
+    text-shadow: rgb(172, 33, 33); 
+    opacity: 1;
+}
+
+.modal-dialog {  
+    max-width: 400px;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+}
+
+#myModalErrorDialog{
+    max-width: 200px; 
+}
+
+.capital {
+    text-transform: uppercase;          
+}
+
+.btn-primary {
+    background-image: url(bgBut.jpg);
+    border-color: rgba(2, 14, 43, 0.7);
+}
+
+/*star backgronud for text*/
+h5, h3{
+    font-weight: bold;
+    background:url(bgText.jpg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#live h3 {   
+    width: fit-content; 
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#navbar {
+    padding: 10px;
+    background-color: rgb(2, 117, 216);
+}
+
+#navbar span, .btn-primary {
+    color: white;
+}
+
+#searchText {
+    width: 150px;
+}
+
+#searchBtn {
+    width: 30px;
+    padding-right: 50px;
+    padding-left: 15px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+  }
+
+.container{
+    width: 80%;
+    margin: 0 10%;
+}
+
+#coinName, #modalText {
+    font-size: small;
+}
+
+/* change default margin-bottom(1->0), margin-top(0->1) */
+.mb-3, .my-3 {
+    margin-bottom: 0rem!important;
+    margin-top: 1rem!important;
+}
+
+.card-columns {
+    column-count: 3;
+}
+
+#card {
+    width: 18rem;
+    height: 15rem;
+    margin-left: 1rem;
+}
+
+.card-img {
+    height: 60px;
+    width: 60px;
+    margin-bottom: 5px;
+}
+
+#usd,
+#eur,
+#ils {
+    margin-bottom: 0rem;
+    font-size: small;
+}
+
+#chartContainer{
+    padding-top:20px;
+    margin-bottom: 50px;
+    height: 300px;
+    width: 100%;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg {
+        background-attachment: scroll;
+    }
+}
